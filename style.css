@@ -1,0 +1,567 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+:root {
+  /* ren -> Renault */
+
+  /* COLORS */
+  --ren-color-000: #ffffff;
+  --ren-color-100: #000000;
+  --ren-color-200: #2c3b5d;
+  --ren-color-300: #616161;
+  --ren-color-400: #f5c949;
+  --ren-color-500: #b7484b;
+  --ren-color-600: #f2f2f2;
+
+  /* BACKGROUND */
+  --ren-body-background: var(--ren-color-000);
+  --ren-body-background2: var(--ren-color-100);
+
+  /* TEXT COLORS */
+  --ren-text-color-primary: var(--ren-color-100);
+  --ren-text-color-secondary: var(--ren-color-000);
+  --ren-color-class: var(--ren-color-200);
+
+  /* SPACINGS */
+
+  --ren-margin-xs: 10px;
+  --ren-margin-s: 20px;
+  --ren-margin-m: 30px;
+  --ren-margin-l: 40px;
+  --ren-margin-xl: 50px;
+  --ren-margin-xxl: 60px;
+
+  --ren-padding-xs: 10px;
+  --ren-padding-s: 20px;
+  --ren-padding-m: 30px;
+  --ren-padding-l: 40px;
+  --ren-padding-xl: 50px;
+  --ren-padding-xxl: 60px;
+
+  --ren-gap-xs: 10px;
+  --ren-gap-s: 20px;
+  --ren-gap-m: 30px;
+  --ren-gap-l: 40px;
+  --ren-gap-xl: 50px;
+  --ren-gap-xxl: 60px;
+
+  --ren-border-size: 2px;
+
+  /* BORDER RADIUS */
+  --ren-border-radius: 10px;
+  --ren-border-radius-button: 200px;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: var(--ren-gap-l);
+}
+
+body {
+  background-color: var(--ren-body-background);
+}
+
+#header {
+  justify-content: space-between;
+  align-items: start;
+  padding: var(--ren-gap-m);
+  flex-wrap: nowrap;
+}
+
+a:link,
+:visited,
+:active {
+  color: var(--ren-text-color-primary);
+}
+
+nav > a:hover {
+  color: var(--ren-color-300);
+}
+.navegacion {
+  width: 80%;
+  justify-content: start;
+  flex-wrap: nowrap;
+}
+
+.logorenault {
+  min-width: 50px;
+  width: 30px;
+}
+
+.enlaces {
+  font-size: 70%;
+}
+
+.menu {
+  width: 30%;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: start;
+  font-size: 50%;
+  text-align: center;
+  padding-right: var(--ren-padding-xl);
+  gap: var(--ren-gap-l);
+  padding-top: var(--ren-padding-s);
+}
+.menu > a {
+  gap: var(--ren-gap-xs);
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.menu > a > img {
+  width: 30px;
+}
+
+.hamburguesa {
+  display: none;
+}
+
+#hero {
+  height: 800px;
+  background-image: url('https://res.cloudinary.com/dudbwref9/image/upload/v1732206496/Proyecto1/r5.webp');
+  background-size: cover;
+  background-position: center;
+}
+
+#electrico {
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  color: var(--ren-color-000);
+  padding-top: var(--ren-padding-l);
+  padding-left: var(--ren-gap-l);
+}
+
+.coches {
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  padding-top: var(--ren-padding-l);
+  background-color: var(--ren-color-300);
+  color: var(--ren-color-000);
+  justify-content: space-evenly;
+}
+.coches > section {
+  height: 250px;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: var(--ren-padding-xs);
+  padding-bottom: var(--ren-padding-xs);
+  padding-left: var(--ren-padding-xs);
+  border-radius: var(--ren-border-radius);
+  border-color: var(--ren-color-000);
+  border-style: solid;
+  border-width: var(--ren-border-size);
+  margin: var(--ren-margin-m);
+  min-height: 200px;
+  min-width: 320px;
+}
+
+.coches > section > div {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.coches > section > div > button {
+  margin-bottom: var(--ren-margin-s);
+  height: 20px;
+  width: 100px;
+  border-style: none;
+  border-radius: var(--ren-border-radius-button);
+  cursor: pointer;
+}
+.coches > section > div > ul {
+  gap: 0px;
+}
+
+li {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  font-size: 0px;
+  margin: var(--ren-margin-xs);
+}
+
+.coches > section > div > ul > :first-of-type {
+  background-color: var(--ren-color-500);
+  border-style: double;
+  border-width: 4px;
+}
+.coches > section > div > ul > :nth-of-type(2) {
+  background-color: var(--ren-color-200);
+  border-style: double;
+  border-width: 4px;
+}
+.coches > section > div > ul > :nth-of-type(3) {
+  background-color: var(--ren-color-300);
+  border-style: double;
+  border-width: 4px;
+}
+.coches > section > div > ul > :last-of-type {
+  background-color: var(--ren-color-400);
+  border-style: double;
+  border-width: 4px;
+}
+
+.clio {
+  background-image: url(https://res.cloudinary.com/dudbwref9/image/upload/v1732209809/Proyecto1/Clio.png);
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+.megane {
+  background-image: url(https://res.cloudinary.com/dudbwref9/image/upload/v1732213327/Proyecto1/Megane.png);
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+.arkana {
+  background-image: url(https://res.cloudinary.com/dudbwref9/image/upload/v1732874281/Proyecto1/arkana.png);
+  grid-row: 1/2;
+  grid-column: 3/4;
+}
+.espace {
+  background-image: url(https://res.cloudinary.com/dudbwref9/image/upload/v1732874281/Proyecto1/espace.png);
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+.rafale {
+  background-image: url(https://res.cloudinary.com/dudbwref9/image/upload/v1732874281/Proyecto1/rafale.png);
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+.symbioz {
+  background-image: url(https://res.cloudinary.com/dudbwref9/image/upload/v1732874281/Proyecto1/symbioz.png);
+  grid-row: 2/3;
+  grid-column: 3/4;
+}
+.online {
+  background-color: var(--ren-color-600);
+}
+
+.compra {
+  align-items: start;
+  margin: auto;
+  width: 800px;
+  height: 800px;
+  background-image: url(https://res.cloudinary.com/dudbwref9/image/upload/v1733691713/Proyecto1/symbiozlateral.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.compra > div {
+  padding-left: var(--ren-padding-m);
+}
+
+h3 {
+  padding-top: var(--ren-padding-l);
+  padding-bottom: var(--ren-padding-m);
+  font-size: 60px;
+}
+.compra > div > p {
+  padding-bottom: var(--ren-padding-m);
+}
+.compra > div > button {
+  margin-bottom: var(--ren-margin-s);
+  height: 20px;
+  width: 200px;
+  border-style: none;
+  border-radius: var(--ren-border-radius-button);
+  cursor: pointer;
+}
+.scroll {
+  align-items: start;
+  justify-content: start;
+  flex-wrap: nowrap;
+  background-color: var(--ren-color-300);
+  padding: var(--ren-padding-m);
+  overflow: auto;
+  border-style: solid;
+  border-width: 5px;
+  border-color: var(--ren-color-100);
+  margin: var(--ren-margin-xs);
+  border-radius: var(--ren-border-radius);
+}
+
+.imagen {
+  width: 70svh;
+}
+.scroll > div > h4 {
+  width: 200px;
+  margin-bottom: var(--ren-margin-xs);
+  font-size: 20px;
+}
+#Alpine {
+  height: 800px;
+  background-image: url('https://res.cloudinary.com/dudbwref9/image/upload/v1737105181/Proyecto1/Rafalealpine.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#Hybrid {
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  color: var(--ren-color-100);
+  padding-top: var(--ren-padding-l);
+  padding-left: var(--ren-gap-l);
+}
+
+#Hybrid > h5 {
+  font-size: 30px;
+}
+#Hybrid > p {
+  width: 400px;
+}
+.llanta {
+  flex-wrap: nowrap;
+  padding: var(--ren-padding-xxl);
+  gap: var(--ren-gap-xxl);
+  font-size: 20px;
+}
+.llanta > div {
+  justify-content: end;
+}
+.llanta > div > p {
+  width: 400px;
+}
+
+.llanta > div > img {
+  width: 50%;
+  border-radius: var(--ren-border-radius);
+}
+h6 {
+  font-size: 30px;
+}
+
+.footer {
+  flex-direction: column;
+  background-color: var(--ren-color-100);
+  color: var(--ren-color-000);
+  padding: var(--ren-padding-l);
+  text-align: center;
+}
+.newsletter {
+  flex-direction: column;
+}
+form {
+  display: flex;
+  justify-content: space-between;
+  border-style: solid;
+  border-color: var(--ren-color-000);
+  border-radius: var(--ren-border-radius-button);
+  width: 500px;
+  height: 50px;
+}
+.email {
+  background-color: var(--ren-color-100);
+  width: 300px;
+  color: var(--ren-color-000);
+}
+
+form > button {
+  border-radius: var(--ren-border-radius-button);
+  background-color: var(--ren-color-300);
+  border: none;
+  width: 100px;
+  cursor: pointer;
+}
+footer > div > p {
+  font-size: 25px;
+}
+
+footer > div > ul > li {
+  font-size: 0px;
+  color: var(--ren-color-000);
+}
+
+footer > div > ul > li > a > img {
+  width: 150%;
+}
+footer > div > ul > li > a > img:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 1400px) {
+  #Hybrid > p {
+    display: none;
+  }
+}
+@media (max-width: 1300px) {
+  .llanta {
+    gap: var(--ren-gap-s);
+    padding: var(--ren-padding-s);
+  }
+  .llanta > div > img {
+    min-width: 300px;
+  }
+  #Alpine {
+    height: 600px;
+  }
+}
+@media (max-width: 1190px) {
+  .coches {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .clio {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+  .megane {
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+  .arkana {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+  .espace {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+  .rafale {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+  .symbioz {
+    grid-row: 3/4;
+    grid-column: 2/3;
+  }
+  li {
+    width: 20px;
+    height: 20px;
+  }
+  .coches > section {
+    padding-top: var(--ren-padding-xs);
+  }
+  .imagen {
+    width: 50svh;
+  }
+}
+@media (max-width: 1000px) {
+  .enlaces {
+    display: none;
+  }
+  .menu {
+    gap: var(--ren-gap-s);
+    padding: var(--ren-padding-s);
+  }
+  .hamburguesa {
+    display: block;
+  }
+  #Alpine {
+    height: 500px;
+  }
+  .menu {
+    width: 70%;
+  }
+}
+@media (max-width: 870px) {
+  .coches {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
+  .clio {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+  .megane {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+  .arkana {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+  .espace {
+    grid-row: 4/5;
+    grid-column: 1/2;
+  }
+  .rafale {
+    grid-row: 5/6;
+    grid-column: 1/2;
+  }
+  .symbioz {
+    grid-row: 6/7;
+    grid-column: 1/2;
+  }
+}
+@media (max-width: 810px) {
+  #hero {
+    height: 400px;
+    font-size: 12px;
+  }
+  .compra {
+    width: 400px;
+  }
+  .compra > div {
+    font-size: 15px;
+  }
+  .compra > div > h3 {
+    font-size: 30px;
+  }
+  form {
+    width: 250px;
+  }
+  .email {
+    width: 100px;
+  }
+  .llanta {
+    font-size: 10px;
+  }
+}
+@media (max-width: 750px) {
+  #Alpine {
+    height: 400px;
+  }
+  #Hybrid > h5 {
+    font-size: 20px;
+  }
+  .llanta > div > p {
+    width: 200px;
+  }
+}
+@media (max-width: 610px) {
+  #Alpine {
+    height: 300px;
+  }
+  #Hybrid > h5 {
+    font-size: 15px;
+  }
+  .llanta > div > p {
+    width: 100px;
+  }
+}
+@media (max-width: 475px) {
+  .llanta > div > img {
+    min-width: 200px;
+  }
+  #Alpine {
+    height: 200px;
+  }
+  #Hybrid {
+    padding-top: var(--ren-padding-xs);
+  }
+}
